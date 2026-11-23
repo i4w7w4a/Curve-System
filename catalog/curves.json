@@ -1,0 +1,1398 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedBy": "scripts/render-atlas.mjs",
+  "sourceReviewDate": "2026-11-24",
+  "curves": [
+    {
+      "id": "linear",
+      "name": "Linear",
+      "nameRu": "Линейная",
+      "family": "linear",
+      "variant": "none",
+      "formula": "f(t)=t",
+      "description": "Равномерное изменение значения; ненулевая скорость в начале и конце.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "При продолжении постоянными значениями скорость скачком меняется на границах."
+      ],
+      "sources": [
+        "https://www.w3.org/TR/css-easing-1/"
+      ]
+    },
+    {
+      "id": "quad-in",
+      "name": "Quad in",
+      "nameRu": "Квадратичная · разгон",
+      "family": "quad",
+      "variant": "in",
+      "formula": "g(t)=t²; f=g",
+      "description": "Квадратичная: разгон.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "quad-out",
+      "name": "Quad out",
+      "nameRu": "Квадратичная · торможение",
+      "family": "quad",
+      "variant": "out",
+      "formula": "g(t)=t²; f(t)=1−g(1−t)",
+      "description": "Квадратичная: торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "quad-in-out",
+      "name": "Quad in-out",
+      "nameRu": "Квадратичная · разгон и торможение",
+      "family": "quad",
+      "variant": "in-out",
+      "formula": "g(t)=t²; f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Квадратичная: разгон и торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Симметричная склейка в t=0.5 не гарантирует непрерывного ускорения."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "cubic-in",
+      "name": "Cubic in",
+      "nameRu": "Кубическая · разгон",
+      "family": "cubic",
+      "variant": "in",
+      "formula": "g(t)=t³; f=g",
+      "description": "Кубическая: разгон.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "cubic-out",
+      "name": "Cubic out",
+      "nameRu": "Кубическая · торможение",
+      "family": "cubic",
+      "variant": "out",
+      "formula": "g(t)=t³; f(t)=1−g(1−t)",
+      "description": "Кубическая: торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "cubic-in-out",
+      "name": "Cubic in-out",
+      "nameRu": "Кубическая · разгон и торможение",
+      "family": "cubic",
+      "variant": "in-out",
+      "formula": "g(t)=t³; f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Кубическая: разгон и торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Симметричная склейка в t=0.5 не гарантирует непрерывного ускорения."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "quart-in",
+      "name": "Quart in",
+      "nameRu": "Четвёртая степень · разгон",
+      "family": "quart",
+      "variant": "in",
+      "formula": "g(t)=t⁴; f=g",
+      "description": "Четвёртая степень: разгон.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "quart-out",
+      "name": "Quart out",
+      "nameRu": "Четвёртая степень · торможение",
+      "family": "quart",
+      "variant": "out",
+      "formula": "g(t)=t⁴; f(t)=1−g(1−t)",
+      "description": "Четвёртая степень: торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "quart-in-out",
+      "name": "Quart in-out",
+      "nameRu": "Четвёртая степень · разгон и торможение",
+      "family": "quart",
+      "variant": "in-out",
+      "formula": "g(t)=t⁴; f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Четвёртая степень: разгон и торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Симметричная склейка в t=0.5 не гарантирует непрерывного ускорения."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "quint-in",
+      "name": "Quint in",
+      "nameRu": "Пятая степень · разгон",
+      "family": "quint",
+      "variant": "in",
+      "formula": "g(t)=t⁵; f=g",
+      "description": "Пятая степень: разгон.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "quint-out",
+      "name": "Quint out",
+      "nameRu": "Пятая степень · торможение",
+      "family": "quint",
+      "variant": "out",
+      "formula": "g(t)=t⁵; f(t)=1−g(1−t)",
+      "description": "Пятая степень: торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "quint-in-out",
+      "name": "Quint in-out",
+      "nameRu": "Пятая степень · разгон и торможение",
+      "family": "quint",
+      "variant": "in-out",
+      "formula": "g(t)=t⁵; f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Пятая степень: разгон и торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Симметричная склейка в t=0.5 не гарантирует непрерывного ускорения."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "sine-in",
+      "name": "Sine in",
+      "nameRu": "Синусоидальная · разгон",
+      "family": "sine",
+      "variant": "in",
+      "formula": "g(t)=1−cos(πt/2); f=g",
+      "description": "Синусоидальная: разгон.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "sine-out",
+      "name": "Sine out",
+      "nameRu": "Синусоидальная · торможение",
+      "family": "sine",
+      "variant": "out",
+      "formula": "g(t)=1−cos(πt/2); f(t)=1−g(1−t)",
+      "description": "Синусоидальная: торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "sine-in-out",
+      "name": "Sine in-out",
+      "nameRu": "Синусоидальная · разгон и торможение",
+      "family": "sine",
+      "variant": "in-out",
+      "formula": "g(t)=1−cos(πt/2); f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Синусоидальная: разгон и торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "expo-in",
+      "name": "Expo in",
+      "nameRu": "Нормированная экспонента · разгон",
+      "family": "expo",
+      "variant": "in",
+      "formula": "g(t)=expm1(k·t)/expm1(k); f=g",
+      "description": "Нормированная экспонента: разгон.",
+      "parameters": [
+        {
+          "key": "strength",
+          "label": "Крутизна k",
+          "min": 1,
+          "max": 12,
+          "step": 0.1,
+          "default": 7,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Непрерывная нормированная версия Curve System; не побитовая копия Penner с подстановкой крайних значений."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "expo-out",
+      "name": "Expo out",
+      "nameRu": "Нормированная экспонента · торможение",
+      "family": "expo",
+      "variant": "out",
+      "formula": "g(t)=expm1(k·t)/expm1(k); f(t)=1−g(1−t)",
+      "description": "Нормированная экспонента: торможение.",
+      "parameters": [
+        {
+          "key": "strength",
+          "label": "Крутизна k",
+          "min": 1,
+          "max": 12,
+          "step": 0.1,
+          "default": 7,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Непрерывная нормированная версия Curve System; не побитовая копия Penner с подстановкой крайних значений."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "expo-in-out",
+      "name": "Expo in-out",
+      "nameRu": "Нормированная экспонента · разгон и торможение",
+      "family": "expo",
+      "variant": "in-out",
+      "formula": "g(t)=expm1(k·t)/expm1(k); f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Нормированная экспонента: разгон и торможение.",
+      "parameters": [
+        {
+          "key": "strength",
+          "label": "Крутизна k",
+          "min": 1,
+          "max": 12,
+          "step": 0.1,
+          "default": 7,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Непрерывная нормированная версия Curve System; не побитовая копия Penner с подстановкой крайних значений.",
+        "Симметричная склейка в t=0.5 не гарантирует непрерывного ускорения."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "circ-in",
+      "name": "Circ in",
+      "nameRu": "Дуга окружности · разгон",
+      "family": "circ",
+      "variant": "in",
+      "formula": "g(t)=1−√(1−t²); f=g",
+      "description": "Дуга окружности: разгон.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Вертикальная касательная даёт неограниченные производные в некоторых точках; API возвращает null."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "circ-out",
+      "name": "Circ out",
+      "nameRu": "Дуга окружности · торможение",
+      "family": "circ",
+      "variant": "out",
+      "formula": "g(t)=1−√(1−t²); f(t)=1−g(1−t)",
+      "description": "Дуга окружности: торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Вертикальная касательная даёт неограниченные производные в некоторых точках; API возвращает null."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "circ-in-out",
+      "name": "Circ in-out",
+      "nameRu": "Дуга окружности · разгон и торможение",
+      "family": "circ",
+      "variant": "in-out",
+      "formula": "g(t)=1−√(1−t²); f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Дуга окружности: разгон и торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Симметричная склейка в t=0.5 не гарантирует непрерывного ускорения.",
+        "Вертикальная касательная даёт неограниченные производные в некоторых точках; API возвращает null."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "back-in",
+      "name": "Back in",
+      "nameRu": "Обратный ход · разгон",
+      "family": "back",
+      "variant": "in",
+      "formula": "g(t)=(s+1)t³−s·t²; f=g",
+      "description": "Обратный ход: разгон.",
+      "parameters": [
+        {
+          "key": "overshoot",
+          "label": "Коэффициент s",
+          "min": 0,
+          "max": 4,
+          "step": 0.05,
+          "default": 1.70158,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": false,
+        "bounded": false,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Выход за [0,1] является частью формы; не обрезать результат автоматически. In-out — симметрия той же g, без дополнительного множителя Penner 1.525."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "back-out",
+      "name": "Back out",
+      "nameRu": "Обратный ход · торможение",
+      "family": "back",
+      "variant": "out",
+      "formula": "g(t)=(s+1)t³−s·t²; f(t)=1−g(1−t)",
+      "description": "Обратный ход: торможение.",
+      "parameters": [
+        {
+          "key": "overshoot",
+          "label": "Коэффициент s",
+          "min": 0,
+          "max": 4,
+          "step": 0.05,
+          "default": 1.70158,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": false,
+        "bounded": false,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Выход за [0,1] является частью формы; не обрезать результат автоматически. In-out — симметрия той же g, без дополнительного множителя Penner 1.525."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "back-in-out",
+      "name": "Back in-out",
+      "nameRu": "Обратный ход · разгон и торможение",
+      "family": "back",
+      "variant": "in-out",
+      "formula": "g(t)=(s+1)t³−s·t²; f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Обратный ход: разгон и торможение.",
+      "parameters": [
+        {
+          "key": "overshoot",
+          "label": "Коэффициент s",
+          "min": 0,
+          "max": 4,
+          "step": 0.05,
+          "default": 1.70158,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": false,
+        "bounded": false,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Симметричная склейка в t=0.5 не гарантирует непрерывного ускорения.",
+        "Выход за [0,1] является частью формы; не обрезать результат автоматически. In-out — симметрия той же g, без дополнительного множителя Penner 1.525."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "elastic-in",
+      "name": "Elastic in",
+      "nameRu": "Упругий отклик · разгон",
+      "family": "elastic",
+      "variant": "in",
+      "formula": "g(t)=1−h(1−t); h(t)=(1−exp(−d·t)cos(2πc·t))/(1−exp(−d)cos(2πc)); f=g",
+      "description": "Упругий отклик: разгон.",
+      "parameters": [
+        {
+          "key": "decay",
+          "label": "Затухание d",
+          "min": 1,
+          "max": 15,
+          "step": 0.1,
+          "default": 7,
+          "integer": false
+        },
+        {
+          "key": "cycles",
+          "label": "Колебания c",
+          "min": 1,
+          "max": 6,
+          "step": 0.1,
+          "default": 3.25,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": false,
+        "bounded": false,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Непрерывная нормированная версия Curve System; не побитовая копия Penner с подстановкой крайних значений.",
+        "Затухающий косинус — художественная функция; начальная скорость не обязана быть нулевой. Это не spring-response."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "elastic-out",
+      "name": "Elastic out",
+      "nameRu": "Упругий отклик · торможение",
+      "family": "elastic",
+      "variant": "out",
+      "formula": "g(t)=1−h(1−t); h(t)=(1−exp(−d·t)cos(2πc·t))/(1−exp(−d)cos(2πc)); f(t)=1−g(1−t)",
+      "description": "Упругий отклик: торможение.",
+      "parameters": [
+        {
+          "key": "decay",
+          "label": "Затухание d",
+          "min": 1,
+          "max": 15,
+          "step": 0.1,
+          "default": 7,
+          "integer": false
+        },
+        {
+          "key": "cycles",
+          "label": "Колебания c",
+          "min": 1,
+          "max": 6,
+          "step": 0.1,
+          "default": 3.25,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": false,
+        "bounded": false,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Непрерывная нормированная версия Curve System; не побитовая копия Penner с подстановкой крайних значений.",
+        "Затухающий косинус — художественная функция; начальная скорость не обязана быть нулевой. Это не spring-response."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "elastic-in-out",
+      "name": "Elastic in-out",
+      "nameRu": "Упругий отклик · разгон и торможение",
+      "family": "elastic",
+      "variant": "in-out",
+      "formula": "g(t)=1−h(1−t); h(t)=(1−exp(−d·t)cos(2πc·t))/(1−exp(−d)cos(2πc)); f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Упругий отклик: разгон и торможение.",
+      "parameters": [
+        {
+          "key": "decay",
+          "label": "Затухание d",
+          "min": 1,
+          "max": 15,
+          "step": 0.1,
+          "default": 7,
+          "integer": false
+        },
+        {
+          "key": "cycles",
+          "label": "Колебания c",
+          "min": 1,
+          "max": 6,
+          "step": 0.1,
+          "default": 3.25,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": false,
+        "bounded": false,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Непрерывная нормированная версия Curve System; не побитовая копия Penner с подстановкой крайних значений.",
+        "Симметричная склейка в t=0.5 не гарантирует непрерывного ускорения.",
+        "Затухающий косинус — художественная функция; начальная скорость не обязана быть нулевой. Это не spring-response."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "bounce-in",
+      "name": "Bounce in",
+      "nameRu": "Отскоки · разгон",
+      "family": "bounce",
+      "variant": "in",
+      "formula": "g(t)=1−b(1−t); b(t)=a(t−oᵢ)²+cᵢ, a=121/16 (4 pieces); f=g",
+      "description": "Отскоки: разгон.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": false,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "В точках столкновения скорость имеет скачок; конечные ускорение и рывок там не определены."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "bounce-out",
+      "name": "Bounce out",
+      "nameRu": "Отскоки · торможение",
+      "family": "bounce",
+      "variant": "out",
+      "formula": "g(t)=1−b(1−t); b(t)=a(t−oᵢ)²+cᵢ, a=121/16 (4 pieces); f(t)=1−g(1−t)",
+      "description": "Отскоки: торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": false,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "В точках столкновения скорость имеет скачок; конечные ускорение и рывок там не определены."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "bounce-in-out",
+      "name": "Bounce in-out",
+      "nameRu": "Отскоки · разгон и торможение",
+      "family": "bounce",
+      "variant": "in-out",
+      "formula": "g(t)=1−b(1−t); b(t)=a(t−oᵢ)²+cᵢ, a=121/16 (4 pieces); f(t)=g(2t)/2 if t<1/2; 1−g(2−2t)/2 otherwise",
+      "description": "Отскоки: разгон и торможение.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": false,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Симметричная склейка в t=0.5 не гарантирует непрерывного ускорения.",
+        "В точках столкновения скорость имеет скачок; конечные ускорение и рывок там не определены."
+      ],
+      "sources": [
+        "https://easings.net/"
+      ]
+    },
+    {
+      "id": "smoothstep",
+      "name": "Smoothstep",
+      "nameRu": "Мягкий переход C¹",
+      "family": "polynomial",
+      "variant": "none",
+      "formula": "f(t)=3t²−2t³",
+      "description": "Нулевая скорость по краям; при соединении с неподвижностью ускорение скачет.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true,
+        "clampedContinuity": "C1"
+      },
+      "notes": [],
+      "sources": [
+        "https://registry.khronos.org/OpenGL-Refpages/gl4/html/smoothstep.xhtml"
+      ]
+    },
+    {
+      "id": "smootherstep",
+      "name": "Smootherstep / minimum jerk",
+      "nameRu": "Мягкий переход C² · minimum jerk",
+      "family": "polynomial",
+      "variant": "none",
+      "formula": "f(t)=10t³−15t⁴+6t⁵",
+      "description": "Нулевые скорость и ускорение на концах; подходит для плавного старта и остановки.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true,
+        "clampedContinuity": "C2"
+      },
+      "notes": [
+        "Minimum jerk при фиксированных длительности, положениях и нулевых крайних скоростях/ускорениях. Это не универсальная оптимальность движения."
+      ],
+      "sources": [
+        "https://doi.org/10.1523/JNEUROSCI.05-07-01688.1985"
+      ]
+    },
+    {
+      "id": "septic",
+      "name": "Septic / zero endpoint jerk",
+      "nameRu": "Седьмая степень · нулевой рывок",
+      "family": "polynomial",
+      "variant": "none",
+      "formula": "f(t)=35t⁴−84t⁵+70t⁶−20t⁷",
+      "description": "Нулевые первые три производные на концах: соединение с неподвижностью C³.",
+      "parameters": [],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true,
+        "clampedContinuity": "C3"
+      },
+      "notes": [
+        "Формула получается из восьми условий: значения 0/1 и нулевые первые три производные на обоих концах. Название septic указывает степень. Оптимальность minimum snap требует явно заданной вариационной задачи."
+      ],
+      "sources": []
+    },
+    {
+      "id": "logistic",
+      "name": "Normalized logistic",
+      "nameRu": "Нормированная логистическая",
+      "family": "sigmoid",
+      "variant": "none",
+      "formula": "f(t)=(σ(k(t−1/2))−σ(−k/2))/(σ(k/2)−σ(−k/2)); σ(x)=1/(1+e⁻ˣ)",
+      "description": "Управляемая S-форма. Значения в концах нормированы, но скорости там обычно ненулевые.",
+      "parameters": [
+        {
+          "key": "steepness",
+          "label": "Крутизна k",
+          "min": 1,
+          "max": 16,
+          "step": 0.1,
+          "default": 10,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Самостоятельно нормированное определение логистической функции; соответствие конкретной внешней библиотеке не заявлено."
+      ],
+      "sources": []
+    },
+    {
+      "id": "cubic-bezier",
+      "name": "Cubic Bézier",
+      "nameRu": "Кубическая Безье",
+      "family": "bezier",
+      "variant": "none",
+      "formula": "f(t)=Bᵧ(u), where Bₓ(u)=t; P₀=(0,0),P₃=(1,1)",
+      "description": "Редактируемая временная кривая с двумя контрольными точками; время инвертируется численно.",
+      "parameters": [
+        {
+          "key": "x1",
+          "label": "x₁",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.42,
+          "integer": false
+        },
+        {
+          "key": "y1",
+          "label": "y₁",
+          "min": -2,
+          "max": 3,
+          "step": 0.01,
+          "default": 0,
+          "integer": false
+        },
+        {
+          "key": "x2",
+          "label": "x₂",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.58,
+          "integer": false
+        },
+        {
+          "key": "y2",
+          "label": "y₂",
+          "min": -2,
+          "max": 3,
+          "step": 0.01,
+          "default": 1,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": "parameter-dependent",
+        "bounded": "parameter-dependent",
+        "normalizedEndpoints": true,
+        "continuous": true
+      },
+      "notes": [
+        "Ограничение y в [-2,3] — диапазон редактора этой версии; CSS допускает произвольные конечные y.",
+        "Производная при вырожденном dx/du может быть бесконечной. Равные x/y координаты распознаются как точная linear."
+      ],
+      "sources": [
+        "https://www.w3.org/TR/css-easing-1/"
+      ]
+    },
+    {
+      "id": "spring-response",
+      "name": "Physical spring response",
+      "nameRu": "Физический отклик пружины",
+      "family": "spring",
+      "variant": "response",
+      "formula": "s″(τ)+2ζωs′(τ)+ω²(s(τ)−1)=0; s(0)=s′(0)=0; f(t)=s(Tt)",
+      "description": "Аналитический ответ системы второго порядка. Конец окна — не обязательно целевое значение.",
+      "parameters": [
+        {
+          "key": "frequency",
+          "label": "Собственная частота ω, рад/с",
+          "min": 1,
+          "max": 30,
+          "step": 0.1,
+          "default": 12,
+          "integer": false
+        },
+        {
+          "key": "damping",
+          "label": "Коэффициент затухания ζ",
+          "min": 0.05,
+          "max": 2,
+          "step": 0.01,
+          "default": 0.35,
+          "integer": false
+        },
+        {
+          "key": "duration",
+          "label": "Горизонт T, с",
+          "min": 0.1,
+          "max": 3,
+          "step": 0.05,
+          "default": 1,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": "parameter-dependent",
+        "bounded": "parameter-dependent",
+        "normalizedEndpoints": false,
+        "continuous": true,
+        "endpointPolicy": "asymptotic"
+      },
+      "notes": [
+        "T — физический горизонт в секундах. API производных дифференцирует по t, поэтому содержит множители Tⁿ.",
+        "Нет переключения цели, начальной скорости и stateful-интегратора; это одиночный step response."
+      ],
+      "sources": [
+        "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/pages/unit-ii-second-order-constant-coefficient-linear-equations/damped-harmonic-oscillators/"
+      ]
+    },
+    {
+      "id": "spring-ease",
+      "name": "Endpoint-normalized spring",
+      "nameRu": "Пружина с нормировкой конца",
+      "family": "spring",
+      "variant": "normalized",
+      "formula": "f(t)=s(Tt)/s(T), with s from spring-response",
+      "description": "Пружинная форма на фиксированном интервале с точными значениями 0 и 1.",
+      "parameters": [
+        {
+          "key": "frequency",
+          "label": "Собственная частота ω, рад/с",
+          "min": 1,
+          "max": 30,
+          "step": 0.1,
+          "default": 12,
+          "integer": false
+        },
+        {
+          "key": "damping",
+          "label": "Коэффициент затухания ζ",
+          "min": 0.05,
+          "max": 2,
+          "step": 0.01,
+          "default": 0.35,
+          "integer": false
+        },
+        {
+          "key": "duration",
+          "label": "Горизонт T, с",
+          "min": 0.1,
+          "max": 3,
+          "step": 0.05,
+          "default": 1,
+          "integer": false
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": "parameter-dependent",
+        "bounded": "parameter-dependent",
+        "normalizedEndpoints": true,
+        "continuous": true,
+        "endpointPolicy": "normalize-value"
+      },
+      "notes": [
+        "Нормировка меняет физический отклик и не обнуляет конечную скорость. Не выдавать эту функцию за исходный spring-response."
+      ],
+      "sources": [
+        "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/pages/unit-ii-second-order-constant-coefficient-linear-equations/damped-harmonic-oscillators/"
+      ]
+    },
+    {
+      "id": "steps-start",
+      "name": "Steps start",
+      "nameRu": "Ступени · скачок в начале",
+      "family": "steps",
+      "variant": "start",
+      "formula": "f(t)=min(1,(floor(n·t)+1)/n)",
+      "description": "Дискретное переключение состояний. Между скачками производные равны нулю.",
+      "parameters": [
+        {
+          "key": "steps",
+          "label": "Число ступеней n",
+          "min": 1,
+          "max": 24,
+          "step": 1,
+          "default": 5,
+          "integer": true
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": false,
+        "continuous": false,
+        "endpointPolicy": "initial-jump"
+      },
+      "notes": [
+        "Реализованы jump-start/jump-end при before=false на [0,1]; это не полная модель CSS fill/before.",
+        "f(0)=1/n: первая ступень появляется сразу."
+      ],
+      "sources": [
+        "https://www.w3.org/TR/css-easing-1/"
+      ]
+    },
+    {
+      "id": "steps-end",
+      "name": "Steps end",
+      "nameRu": "Ступени · скачок в конце",
+      "family": "steps",
+      "variant": "end",
+      "formula": "f(t)=floor(n·t)/n",
+      "description": "Дискретное переключение состояний. Между скачками производные равны нулю.",
+      "parameters": [
+        {
+          "key": "steps",
+          "label": "Число ступеней n",
+          "min": 1,
+          "max": 24,
+          "step": 1,
+          "default": 5,
+          "integer": true
+        }
+      ],
+      "properties": {
+        "domain": [
+          0,
+          1
+        ],
+        "derivativeVariable": "normalized-time",
+        "derivativeMethod": "analytic-forward-ad-order-3",
+        "status": "implemented",
+        "monotone": true,
+        "bounded": true,
+        "normalizedEndpoints": true,
+        "continuous": false,
+        "endpointPolicy": "final-jump"
+      },
+      "notes": [
+        "Реализованы jump-start/jump-end при before=false на [0,1]; это не полная модель CSS fill/before.",
+        "f(1)=1: последний скачок происходит в конце."
+      ],
+      "sources": [
+        "https://www.w3.org/TR/css-easing-1/"
+      ]
+    }
+  ]
+}

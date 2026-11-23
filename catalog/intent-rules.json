@@ -1,0 +1,63 @@
+{
+  "format": "curve-system/intent-rules@0.1",
+  "status": "reference-heuristics",
+  "description": "Candidate selection rules. These are design starting points, not perceptual laws or formal guarantees. Validate parameters and target-property constraints separately.",
+  "rules": [
+    {
+      "intent": "calm-start-and-stop",
+      "examplesRu": ["мягко начать и закончить", "спокойное движение камеры между двумя точками"],
+      "candidates": ["smootherstep", "septic", "sine-in-out"],
+      "check": ["endpoint-velocity", "endpoint-acceleration", "duration", "path-versus-timing"],
+      "note": "Sine in-out has nonzero endpoint acceleration; do not promise a C2 join to a hold."
+    },
+    {
+      "intent": "bounded-property-transition",
+      "examplesRu": ["появление opacity без превышения 100%", "параметр строго между минимумом и максимумом"],
+      "candidates": ["smootherstep", "smoothstep", "sine-in-out", "cubic-out"],
+      "rejectByDefault": ["back", "elastic", "spring"],
+      "check": ["monotonicity", "output-bounds", "property-clamping", "join-continuity"]
+    },
+    {
+      "intent": "fast-arrival",
+      "examplesRu": ["быстро откликнуться и затормозить", "выдвинуть панель"],
+      "candidates": ["cubic-out", "quint-out", "cubic-bezier"],
+      "check": ["initial-velocity", "target-platform", "reduced-motion"],
+      "note": "A high initial slope is intentional here; reject it when a zero-velocity start is required."
+    },
+    {
+      "intent": "anticipation",
+      "examplesRu": ["сначала чуть назад", "замах перед движением"],
+      "candidates": ["back-in", "back-in-out"],
+      "check": ["negative-output-allowed", "overshoot-parameter", "collision-with-layout"]
+    },
+    {
+      "intent": "settling-oscillation",
+      "examplesRu": ["упруго прийти к цели", "небольшая пружина в конце"],
+      "candidates": ["spring-response", "spring-ease", "elastic-out"],
+      "check": ["physical-versus-artistic", "overshoot-allowed", "finite-horizon", "terminal-velocity"],
+      "note": "These candidates are different models. Exact endpoint normalization is not physical settling."
+    },
+    {
+      "intent": "discrete-state-change",
+      "examplesRu": ["переключать кадры спрайта", "ступенчатое изменение"],
+      "candidates": ["steps-end", "steps-start"],
+      "check": ["jump-side", "endpoint-inclusion", "number-of-states-versus-intervals"]
+    },
+    {
+      "intent": "follow-moving-target",
+      "examplesRu": ["камера следует за объектом", "цель меняется во время движения"],
+      "candidates": [],
+      "requires": "stateful-smoothing-or-trajectory-system",
+      "status": "not-implemented",
+      "note": "Do not repeatedly restart a finite ease and claim velocity continuity. Preserve state and define deltaTime behavior."
+    },
+    {
+      "intent": "jerk-limited-physical-motion",
+      "examplesRu": ["не превышать ограничения скорости ускорения и рывка"],
+      "candidates": [],
+      "requires": "constrained-trajectory-planner",
+      "status": "not-implemented",
+      "note": "Zero endpoint jerk or minimum integrated jerk is not a general guarantee of a user-specified jerk bound."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Curve System — интерактивный атлас кривых: значение, скорость, ускорение, рывок и живое движение.">
+  <title>Curve System · Curve Lab</title>
+  <link rel="stylesheet" href="playground.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../README.md" aria-label="Curve System — документация">
+      <svg viewBox="0 0 36 36" width="36" height="36" aria-hidden="true"><rect x=".5" y=".5" width="35" height="35" rx="10" fill="#102939" stroke="#285164"/><path d="M7 27C22 27 14 9 29 9" fill="none" stroke="#6ce5d4" stroke-width="2.4"/></svg>
+      <span>Curve System <small>CHANGE OVER TIME</small></span>
+    </a>
+    <nav aria-label="Ссылки проекта"><a href="../docs/catalog.md">Атлас</a><a href="../research/README.md">Исследования</a><a href="https://github.com/i4w7w4a/Curve-System">GitHub ↗</a></nav>
+    <span class="version">CURVE LAB <b>0.1</b></span>
+  </header>
+
+  <div class="workspace">
+    <aside class="library" aria-label="Библиотека кривых">
+      <div class="library-heading"><span class="eyebrow">БИБЛИОТЕКА</span><span id="count" class="count">—</span></div>
+      <label class="sr-only" for="search">Поиск кривой</label>
+      <input id="search" type="search" placeholder="Название, семейство…" autocomplete="off">
+      <label class="sr-only" for="family">Семейство</label>
+      <select id="family"><option value="all">Все семейства</option></select>
+      <div id="curve-list" class="curve-list"></div>
+      <p class="library-foot">Одна шкала времени.<br>Множество характеров движения.</p>
+    </aside>
+
+    <main>
+      <section class="intro">
+        <div><p class="eyebrow">ВЫБРАТЬ · ПОНЯТЬ · ПРИМЕНИТЬ</p><h1 id="curve-name">Лаборатория кривых</h1><p id="curve-description">Загрузка математического ядра…</p></div>
+        <div id="curve-family" class="family-badge">ATLAS</div>
+      </section>
+      <div id="boot-error" class="notice" hidden></div>
+      <section class="chart-panel" aria-label="График значения">
+        <div class="panel-heading"><h2>Значение <span>f(t)</span></h2><label class="compare-label">Сравнить <select id="compare"><option value="none">Без сравнения</option></select></label></div>
+        <div id="value-chart" class="value-chart"></div>
+        <div class="chart-footer"><code id="formula">f(t)</code><span>t ∈ [0, 1] · выход не обрезается</span></div>
+      </section>
+      <section class="derivative-grid" aria-label="Производные по нормализованному времени">
+        <div class="small-panel"><h2>Скорость <span>f′(t)</span></h2><div id="velocity-chart"></div></div>
+        <div class="small-panel"><h2>Ускорение <span>f″(t)</span></h2><div id="acceleration-chart"></div></div>
+        <div class="small-panel"><h2>Рывок <span>f‴(t)</span></h2><div id="jerk-chart"></div></div>
+      </section>
+      <p class="derivative-note">Производные по t, без физических единиц. Для длительности T: скорость × 1/T, ускорение × 1/T², рывок × 1/T³; для перемещения Δq — ещё × Δq. Разрывы и неопределённые значения показаны пропусками.</p>
+      <section class="motion-panel" aria-label="Предпросмотр движения">
+        <div class="panel-heading"><h2>Движение <span>одно время — разный характер</span></h2><output id="time-value">t = 0.000</output></div>
+        <div id="motion-track" class="motion-track"><span class="track-guide start-guide">0</span><span class="track-guide end-guide">1</span><div id="comparison-dot" class="motion-dot reference-dot"></div><div id="motion-dot" class="motion-dot"></div></div>
+        <label class="sr-only" for="scrubber">Положение на временной шкале</label>
+        <input type="range" id="scrubber" min="0" max="1" step="0.001" value="0">
+        <div class="playback"><button id="play" class="primary" type="button">▶ Воспроизвести</button><button id="restart" type="button" aria-label="Вернуться в начало">↺</button><label class="loop"><input id="loop" type="checkbox"> Повтор</label><label class="duration">Длительность <input id="duration" type="number" min="0.1" max="30" step="0.1" value="1.6"> с</label></div>
+      </section>
+    </main>
+
+    <aside class="inspector" aria-label="Параметры и экспорт">
+      <div class="panel-heading"><h2>Параметры</h2><button id="reset" class="text-button" type="button">Сбросить</button></div>
+      <div id="parameters"></div>
+      <div class="inspector-section"><h2>В точке t</h2><dl class="readings"><div><dt>Значение</dt><dd id="value-reading">0</dd></div><div><dt>Скорость</dt><dd id="velocity-reading">0</dd></div><div><dt>Ускорение</dt><dd id="acceleration-reading">0</dd></div><div><dt>Рывок</dt><dd id="jerk-reading">0</dd></div></dl></div>
+      <div class="inspector-section"><h2>Семантика</h2><p id="curve-notes" class="notes"></p></div>
+      <div class="inspector-section"><h2>Забрать в проект</h2><div class="export-buttons"><button id="copy-json" type="button">Копировать JSON</button><button id="download-csv" type="button">Скачать CSV · 241 точка</button><button id="copy-css" type="button">Копировать CSS</button></div><p id="css-note" class="notes"></p><p id="export-status" class="status" role="status" aria-live="polite"></p><details><summary>Посмотреть JSON</summary><pre id="json-preview"></pre></details></div>
+      <p class="inspector-footer">Reference prototype · без внешних зависимостей.<br>CSV — отсчёты, не гарантия точности между ними.</p>
+    </aside>
+  </div>
+  <footer class="page-footer">Curve System · Математика движения, доступная человеку и агенту. <a href="../docs/usage.md">Как перенести кривую →</a></footer>
+  <script type="module" src="playground.mjs"></script>
+  <noscript><p class="notice">Для интерактивного просмотра нужен JavaScript. Статический SVG-атлас доступен в документации репозитория.</p></noscript>
+</body>
+</html>

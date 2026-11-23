@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="500" viewBox="0 0 1040 500" role="img" aria-labelledby="title desc">
+<title id="title">Ступени · скачок в конце</title>
+<desc id="desc">Дискретное переключение состояний. Между скачками производные равны нулю. Ось x: нормализованное время t от 0 до 1. Ось y: значение f(t). Пунктир — линейный переход. График вычислен исходным evaluator Curve System.</desc>
+<style>text{font-family:Inter,DejaVu Sans,Arial,sans-serif} .mono{font-family:DejaVu Sans Mono,monospace}</style>
+<rect width="1040" height="500" rx="24" fill="#0b1220"/>
+<text x="40" y="48" font-size="30" fill="#edf5ff" font-weight="700">Steps end</text>
+<text x="40" y="80" font-size="18" fill="#9bafc7" >Ступени · скачок в конце</text>
+<line x1="75" y1="116" x2="75" y2="394" stroke="#25364a" stroke-width="1"/>
+<line x1="237.5" y1="116" x2="237.5" y2="394" stroke="#25364a" stroke-width="1"/>
+<line x1="400" y1="116" x2="400" y2="394" stroke="#25364a" stroke-width="1"/>
+<line x1="562.5" y1="116" x2="562.5" y2="394" stroke="#25364a" stroke-width="1"/>
+<line x1="725" y1="116" x2="725" y2="394" stroke="#25364a" stroke-width="1"/>
+<line x1="75" y1="328.158" x2="725" y2="328.158" stroke="#62738b" stroke-width="1"/>
+<text x="65" y="332.1578947368421" font-size="13" fill="#9bafc7" text-anchor="end">0</text>
+<line x1="75" y1="255" x2="725" y2="255" stroke="#25364a" stroke-width="1"/>
+<text x="65" y="259" font-size="13" fill="#9bafc7" text-anchor="end">0.5</text>
+<line x1="75" y1="181.842" x2="725" y2="181.842" stroke="#25364a" stroke-width="1"/>
+<text x="65" y="185.8421052631579" font-size="13" fill="#9bafc7" text-anchor="end">1</text>
+<line x1="75" y1="394" x2="725" y2="394" stroke="#62738b" />
+<text x="75" y="417" font-size="13" fill="#9bafc7" text-anchor="middle">0</text>
+<text x="400" y="417" font-size="13" fill="#9bafc7" text-anchor="middle">0.5</text>
+<text x="725" y="417" font-size="13" fill="#9bafc7" text-anchor="middle">1</text>
+<text x="725" y="436" font-size="15" fill="#9bafc7" text-anchor="end">t</text>
+<line x1="75" y1="328.158" x2="725" y2="181.842" stroke="#61748f" stroke-width="1.3" stroke-dasharray="5 6" opacity="0.6"/>
+<line x1="75" y1="328.158" x2="205" y2="328.158" stroke="#87a9ff" stroke-width="3.5"/>
+<line x1="205" y1="298.895" x2="335" y2="298.895" stroke="#87a9ff" stroke-width="3.5"/>
+<line x1="335" y1="269.632" x2="465" y2="269.632" stroke="#87a9ff" stroke-width="3.5"/>
+<line x1="465" y1="240.368" x2="595" y2="240.368" stroke="#87a9ff" stroke-width="3.5"/>
+<line x1="595" y1="211.105" x2="725" y2="211.105" stroke="#87a9ff" stroke-width="3.5"/>
+<line x1="205" y1="328.158" x2="205" y2="298.895" stroke="#87a9ff" stroke-width="1" stroke-dasharray="3 4" opacity="0.5"/>
+<circle cx="205" cy="328.158" r="2.6" fill="#111d30" stroke="#87a9ff" stroke-width="2"/>
+<circle cx="205" cy="298.895" r="2.6" fill="#87a9ff" stroke="#87a9ff" stroke-width="2"/>
+<line x1="335" y1="298.895" x2="335" y2="269.632" stroke="#87a9ff" stroke-width="1" stroke-dasharray="3 4" opacity="0.5"/>
+<circle cx="335" cy="298.895" r="2.6" fill="#111d30" stroke="#87a9ff" stroke-width="2"/>
+<circle cx="335" cy="269.632" r="2.6" fill="#87a9ff" stroke="#87a9ff" stroke-width="2"/>
+<line x1="465" y1="269.632" x2="465" y2="240.368" stroke="#87a9ff" stroke-width="1" stroke-dasharray="3 4" opacity="0.5"/>
+<circle cx="465" cy="269.632" r="2.6" fill="#111d30" stroke="#87a9ff" stroke-width="2"/>
+<circle cx="465" cy="240.368" r="2.6" fill="#87a9ff" stroke="#87a9ff" stroke-width="2"/>
+<line x1="595" y1="240.368" x2="595" y2="211.105" stroke="#87a9ff" stroke-width="1" stroke-dasharray="3 4" opacity="0.5"/>
+<circle cx="595" cy="240.368" r="2.6" fill="#111d30" stroke="#87a9ff" stroke-width="2"/>
+<circle cx="595" cy="211.105" r="2.6" fill="#87a9ff" stroke="#87a9ff" stroke-width="2"/>
+<line x1="725" y1="211.105" x2="725" y2="181.842" stroke="#87a9ff" stroke-width="1" stroke-dasharray="3 4" opacity="0.5"/>
+<circle cx="725" cy="211.105" r="2.6" fill="#111d30" stroke="#87a9ff" stroke-width="2"/>
+<circle cx="725" cy="181.842" r="2.6" fill="#87a9ff" stroke="#87a9ff" stroke-width="2"/>
+<circle cx="75" cy="328.158" r="4.5" fill="#87a9ff" stroke="#87a9ff" stroke-width="2"/>
+<circle cx="725" cy="181.842" r="4.5" fill="#87a9ff" stroke="#87a9ff" stroke-width="2"/>
+<text x="75" y="108" font-size="14" fill="#9bafc7" >f(t)</text>
+<rect x="772" y="116" width="225" height="278" rx="15" fill="#111d30" stroke="#26364d"/>
+<text x="792" y="147" font-size="12" fill="#9bafc7" letter-spacing="1.5">ПО УМОЛЧАНИЮ</text>
+<line x1="792" y1="173" x2="817" y2="173" stroke="#87a9ff" stroke-width="3"/>
+<text x="830" y="178" font-size="14" fill="#edf5ff" >Значение</text>
+<line x1="792" y1="203" x2="817" y2="203" stroke="#61748f" stroke-width="1.3" stroke-dasharray="5 5"/>
+<text x="830" y="208" font-size="14" fill="#9bafc7" >Linear</text>
+<text x="792" y="246" font-size="14" fill="#9bafc7" class="mono">f(0)</text>
+<text x="974" y="246" font-size="14" fill="#edf5ff" class="mono" text-anchor="end">0</text>
+<text x="792" y="275" font-size="14" fill="#9bafc7" class="mono">f(1)</text>
+<text x="974" y="275" font-size="14" fill="#edf5ff" class="mono" text-anchor="end">1</text>
+<text x="792" y="304" font-size="14" fill="#9bafc7" class="mono">min*</text>
+<text x="974" y="304" font-size="14" fill="#edf5ff" class="mono" text-anchor="end">0</text>
+<text x="792" y="333" font-size="14" fill="#9bafc7" class="mono">max*</text>
+<text x="974" y="333" font-size="14" fill="#edf5ff" class="mono" text-anchor="end">1</text>
+<text x="40" y="464" font-size="13" fill="#9bafc7" class="mono">CURVE SYSTEM  /  steps-end</text>
+<text x="997" y="464" font-size="12" fill="#9bafc7" text-anchor="end">* extrema: 1001 samples</text>
+</svg>

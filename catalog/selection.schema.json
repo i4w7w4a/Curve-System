@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/i4w7w4a/Curve-System/blob/main/catalog/selection.schema.json",
+  "title": "Curve System selection 0.1",
+  "description": "A curve selection exported by Curve Lab. Curve identifiers and parameter ranges must additionally be validated against the matching evaluator version.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "curve", "playback", "domain", "outputPolicy"],
+  "properties": {
+    "format": { "const": "curve-system/selection@0.1" },
+    "curve": {
+      "type": "object", "additionalProperties": false, "required": ["id", "parameters"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "parameters": { "type": "object", "additionalProperties": { "type": "number" } }
+      }
+    },
+    "playback": {
+      "type": "object", "additionalProperties": false, "required": ["durationSeconds"],
+      "properties": { "durationSeconds": { "type": "number", "exclusiveMinimum": 0 } }
+    },
+    "domain": { "const": [0, 1] },
+    "outputPolicy": { "const": "preserve" }
+  }
+}
